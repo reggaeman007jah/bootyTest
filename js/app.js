@@ -61,11 +61,11 @@ function showItem(e) {
   // console.log(e.target.textContent);
   // console.log(e.target.parentElement);
   data = e.target.parentElement;
-  console.log(data);
+  console.log(data.children.item(2));
   // arrayTest = e.target.parentElement.Array;
   // console.log(arrayTest);
   textData = data.innerText;
-  console.log(textData);
+  // console.log(textData);
 }
 
 // Filter Items
