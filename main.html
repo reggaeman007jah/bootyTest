@@ -38,90 +38,316 @@
     </header>
 
     <div class="container">
-      <div id="main" class="card card-body">
-        <h2 class="title">Add Items</h2>
-        <form id="addForm" class="form-inline mb-3">
-          <input type="text" class="form-control mr-2" id="item" />
-          <input type="submit" class="btn btn-dark" value="Submit" />
-        </form>
+      <div id="mainQuestions" class="card card-body">
+        <!-- <input type="submit" class="btn btn-dark" value="Ask a Question" />
+        <input type="submit" class="btn btn-dark" value="Report a Bug" />
+        <input type="submit" class="btn btn-dark" value="Request a Feature" /> -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#submitQuestion"
+        >
+          Submit a Question about C2
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#submitBugReport"
+        >
+          Report a Bug
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#submitFeatureRequest"
+        >
+          Request a Feature or Change
+        </button>
+      </div>
+      <br /><br />
+      <div class="container">
+        <h1>C2 Portal Activity</h1>
+        <table class="table table-hover table-bordered table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Reported By</th>
+              <th scope="col">Date</th>
+              <th scope="col">Category</th>
+              <th scope="col">Headline</th>
+            </tr>
+          </thead>
+          <tbody id="itemsDark">
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Today</td>
+              <td>Feature Request</td>
+              <td>Enable full auto-heal</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Yesterday</td>
+              <td>Question</td>
+              <td>How do I rejoin units to my squad?</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>01 July 2020</td>
+              <td>Bug Report</td>
+              <td>Pilot will not land on instruction</td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="topSection" class="card card-body">
+          <h2>Reported by:</h2>
+          <h4 id="name">
+            Some dude
+          </h4>
+          <h2>Date:</h2>
+          <h4>
+            Today
+          </h4>
+          <h2>Category:</h2>
+          <h4>
+            Feature Request
+          </h4>
+          <h2>Headline:</h2>
+          <h4>
+            Make better!
+          </h4>
+        </div>
 
-        <h2 class="title">Items</h2>
-        <ul id="items" class="list-group">
-          <li class="list-group-item">
-            Item 1
-            <button class="btn btn-danger btn-sm float-right delete">X</button>
-          </li>
-          <li class="list-group-item">
-            Item 2
-            <button class="btn btn-danger btn-sm float-right delete">X</button>
-          </li>
-          <li class="list-group-item">
-            Item 3
-            <button class="btn btn-danger btn-sm float-right delete">X</button>
-          </li>
-          <li class="list-group-item">
-            Item 4
-            <button class="btn btn-danger btn-sm float-right delete">X</button>
-          </li>
-        </ul>
+        <div id="main" class="card card-body">
+          <h2 class="title">Add Items</h2>
+          <form id="addForm" class="form-inline mb-3">
+            <input type="text" class="form-control mr-2" id="item" />
+            <input type="submit" class="btn btn-dark" value="Submit" />
+          </form>
+
+          <h2 class="title">Items</h2>
+          <ul id="items" class="list-group">
+            <li class="list-group-item">
+              Item 1
+              <button class="btn btn-danger btn-sm float-right delete">
+                X
+              </button>
+            </li>
+            <li class="list-group-item">
+              Item 2
+              <button class="btn btn-danger btn-sm float-right delete">
+                X
+              </button>
+            </li>
+            <li class="list-group-item">
+              Item 3
+              <button class="btn btn-danger btn-sm float-right delete">
+                X
+              </button>
+            </li>
+            <li class="list-group-item">
+              Item 4
+              <button class="btn btn-danger btn-sm float-right delete">
+                X
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <table class="table table-hover table-bordered table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Reported By</th>
-            <th scope="col">Date</th>
-            <th scope="col">Category</th>
-            <th scope="col">Headline</th>
-          </tr>
-        </thead>
-        <tbody id="itemsDark">
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Today</td>
-            <td>Feature Request</td>
-            <td>Enable full auto-heal</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Yesterday</td>
-            <td>Question</td>
-            <td>How do I rejoin units to my squad?</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>01 July 2020</td>
-            <td>Bug Report</td>
-            <td>Pilot will not land on instruction</td>
-          </tr>
-        </tbody>
-      </table>
-      <div id="topSection" class="card card-body">
-        <h2>Reported by:</h2>
-        <h4 id="name">
-          Some dude
-        </h4>
-        <h2>Date:</h2>
-        <h4>
-          Today
-        </h4>
-        <h2>Category:</h2>
-        <h4>
-          Feature Request
-        </h4>
-        <h2>Headline:</h2>
-        <h4>
-          Make better!
-        </h4>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="submitQuestion"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Submit a question about C2
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Ask a question about how to use C2...
+            <br /><br />
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"
+                  >Discord or Steam Username</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="1"
+                  placeholder=".. in case we need to talk more"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"
+                  >Give your submission a title</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="1"
+                  placeholder=".. this will be shown on the main portal list"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Category</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Squad Level Commands</option>
+                  <option>High Command</option>
+                  <option>Radial Menu</option>
+                  <option>Settings</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <!-- <div class="form-group">
+                <label for="exampleFormControlSelect2"
+                  >Example multiple select</label
+                >
+                <select
+                  multiple
+                  class="form-control"
+                  id="exampleFormControlSelect2"
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div> -->
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"
+                  >Provide as much context and detail as you can here:</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Attach File</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    id="exampleFormControlFile1"
+                  />
+                </div>
+              </form>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div
+      class="modal fade"
+      id="submitFeatureRequest"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="submitBugReport"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
